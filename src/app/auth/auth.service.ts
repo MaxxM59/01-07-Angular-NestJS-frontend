@@ -10,7 +10,10 @@ export class AuthService {
     private readonly authenticated = new Subject<boolean>();
     authenticated$ = this.authenticated.asObservable();
 
-    constructor(private readonly httpClient: HttpClient, private readonly router: Router) {}
+    constructor(
+        private readonly httpClient: HttpClient,
+        private readonly router: Router
+    ) {}
 
     isAuthenticated() {
         return this.httpClient.get<boolean>('api/auth').pipe(
