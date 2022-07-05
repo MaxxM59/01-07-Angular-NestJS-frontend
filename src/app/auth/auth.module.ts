@@ -6,16 +6,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterModule } from '@angular/router';
 @NgModule({
-  declarations: [AuthComponent],
-  imports: [
-    CommonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    MatButtonModule,
-  ],
-  exports: [AuthComponent],
+    declarations: [AuthComponent],
+    imports: [
+        CommonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        RouterModule,
+    ],
+    exports: [AuthComponent],
 })
 export class AuthModule {}

@@ -4,7 +4,9 @@
         <mat-label>Email</mat-label>
         <input type="email" matInput [formControl]="email" required />
         <mat-icon matSuffix>email</mat-icon>
-        <mat-error *ngIf="email.invalid">{{ getEmailErrorMessage() }}</mat-error>
+        <mat-error *ngIf="email.invalid">{{
+            getEmailErrorMessage()
+        }}</mat-error>
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
@@ -17,10 +19,13 @@
             maxlength="21"
         />
         <mat-icon matSuffix>lock</mat-icon>
-        <mat-error *ngIf="password.invalid">{{ getPasswordErrorMessage() }}</mat-error>
+        <mat-error *ngIf="password.invalid">{{
+            getPasswordErrorMessage()
+        }}</mat-error>
     </mat-form-field>
+    <a [routerLink]="[formLink]">{{ formSwitch }}</a>
+
     <button mat-raised-button color="primary" (click)="onSubmit()">
         {{ submitLabel }}
     </button>
-    <!-- Create a switch between signup/login-->
 </div>
